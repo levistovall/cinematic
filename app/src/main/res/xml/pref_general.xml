@@ -1,0 +1,44 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- choose between sorting movies by user rating and sorting by popularity -->
+    <ListPreference
+        android:title="@string/pref_label_sortmode"
+        android:key="@string/pref_key_sortmode"
+        android:defaultValue="@string/pref_default_sortmode"
+        android:entries="@array/pref_sortmode_entry"
+        android:entryValues="@array/pref_sortmode_val"
+        />
+
+    <SwitchPreference
+        android:title="@string/pref_label_narrow_by_genre"
+        android:key="@string/pref_key_narrow_by_genre"
+        android:defaultValue="@string/pref_default_narrow_by_genre"/>
+
+    <MultiSelectListPreference
+        android:title="@string/pref_label_genre"
+        android:key="@string/pref_key_genre"
+        android:defaultValue="@array/pref_genres_default"
+        android:entries="@array/pref_genre_entry"
+        android:entryValues="@array/pref_genre_val"
+        android:dependency="@string/pref_key_narrow_by_genre"
+        />
+
+    <SwitchPreference
+        android:title="@string/pref_label_narrow_by_year"
+        android:key="@string/pref_key_narrow_by_year"
+        android:defaultValue="@string/pref_default_narrow_by_year"/>
+    <com.example.levi.movieapp.YearRangePreference
+        android:title="@string/pref_label_year_range"
+        android:key="@string/pref_key_year_range"
+        android:defaultValue=""
+        android:dependency="@string/pref_key_narrow_by_year"
+        />
+
+
+    <SwitchPreference
+        android:title="@string/pref_label_cast"
+        android:key="@string/pref_key_cast"
+        android:defaultValue="@string/pref_default_cast"
+        android:switchTextOn="On"
+        android:switchTextOff="Off"/>
+</PreferenceScreen>

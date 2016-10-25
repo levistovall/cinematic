@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_sortmode_entry">
+        <item>@string/pref_entry_sortmode_pop</item>
+        <item>@string/pref_entry_sortmode_rate</item>
+    </string-array>
+    <string-array name="pref_sortmode_val">
+        <item>@string/pref_value_sortmode_pop</item>
+        <item>@string/pref_value_sortmode_rate</item>
+    </string-array>
+    <string-array name="pref_genre_entry">
+        <item>@string/pref_entry_genre_action</item>
+        <item>@string/pref_entry_genre_adventure</item>
+        <item>@string/pref_entry_genre_animation</item>
+        <item>@string/pref_entry_genre_comedy</item>
+        <item>@string/pref_entry_genre_crime</item>
+        <item>@string/pref_entry_genre_doc</item>
+        <item>@string/pref_entry_genre_drama</item>
+        <item>@string/pref_entry_genre_fam</item>
+        <item>@string/pref_entry_genre_fantasy</item>
+        <item>@string/pref_entry_genre_hist</item>
+        <item>@string/pref_entry_genre_horror</item>
+        <item>@string/pref_entry_genre_music</item>
+        <item>@string/pref_entry_genre_mystery</item>
+        <item>@string/pref_entry_genre_romance</item>
+        <item>@string/pref_entry_genre_scifi</item>
+        <item>@string/pref_entry_genre_thriller</item>
+        <item>@string/pref_entry_genre_war</item>
+        <item>@string/pref_entry_genre_western</item>
+    </string-array>
+    <string-array name="pref_genre_val">
+        <item>@string/pref_value_genre_action</item>
+        <item>@string/pref_value_genre_adventure</item>
+        <item>@string/pref_value_genre_animation</item>
+        <item>@string/pref_value_genre_comedy</item>
+        <item>@string/pref_value_genre_crime</item>
+        <item>@string/pref_value_genre_doc</item>
+        <item>@string/pref_value_genre_drama</item>
+        <item>@string/pref_value_genre_fam</item>
+        <item>@string/pref_value_genre_fantasy</item>
+        <item>@string/pref_value_genre_hist</item>
+        <item>@string/pref_value_genre_horror</item>
+        <item>@string/pref_value_genre_music</item>
+        <item>@string/pref_value_genre_mystery</item>
+        <item>@string/pref_value_genre_romance</item>
+        <item>@string/pref_value_genre_scifi</item>
+        <item>@string/pref_value_genre_thriller</item>
+        <item>@string/pref_value_genre_war</item>
+        <item>@string/pref_value_genre_western</item>
+    </string-array>
+    
+    <string-array name="pref_genres_default"></string-array>
+</resources>

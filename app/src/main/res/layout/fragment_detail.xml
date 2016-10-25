@@ -1,0 +1,230 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    android:padding="0dp">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="0dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_section"
+        android:padding="@dimen/textview_padding_size"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/movie_poster_view"
+            android:padding="@dimen/textview_padding_size" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/title_frame"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/tertiary_padding_size"
+            android:paddingStart="@dimen/tertiary_padding_size"
+            android:paddingRight="@dimen/tertiary_padding_size"
+            android:paddingEnd="@dimen/tertiary_padding_size">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detail_title_view"
+                android:textSize="@dimen/title_text_size"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/subtitle_view"
+                android:textSize="@dimen/subtitle_text_size"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/specs_box"
+        android:orientation="horizontal"
+        android:padding="@dimen/tertiary_padding_size">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/textview_padding_size"
+            android:layout_marginEnd="@dimen/textview_padding_size"
+            android:id="@+id/star_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rating_body"
+            android:layout_marginRight="@dimen/spec_separation"
+            android:layout_marginEnd="@dimen/spec_separation"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendar_icon"
+            android:layout_marginRight="@dimen/textview_padding_size"
+            android:layout_marginEnd="@dimen/textview_padding_size"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_body"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="@dimen/overview_label_size"
+        android:id="@+id/bold_overview_label"
+        android:paddingLeft="@dimen/secondary_padding_size"
+        android:paddingStart="@dimen/secondary_padding_size"
+        android:paddingTop="@dimen/secondary_padding_size"
+        android:paddingRight="@dimen/secondary_padding_size"
+        android:paddingEnd="@dimen/secondary_padding_size"/>
+
+    <!--<android.support.v4.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/overview_size"
+        android:id="@+id/nested_scroll"
+        android:padding="@dimen/textview_padding_size">-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/overview_body"
+            android:scrollbars="vertical"
+            android:paddingLeft="@dimen/secondary_padding_size"
+            android:paddingStart="@dimen/secondary_padding_size"
+            android:paddingBottom="@dimen/secondary_padding_size"
+            android:paddingRight="@dimen/secondary_padding_size"
+            android:paddingEnd="@dimen/secondary_padding_size" />
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/movie_backdrop_view"
+        android:layout_margin="0dp"
+        android:paddingBottom="0dp"
+        android:scaleType="centerCrop"
+        android:layout_weight="1"/>
+</LinearLayout>
+</ScrollView>
+
+<!--
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    android:padding="0dp">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.levi.movieapp.DetailFragment">-->
+    <!-- TODO: Update blank fragment layout-->
+
+
+<!--
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detail_gridview"
+        android:padding="@dimen/textview_padding_size">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:singleLine="false"
+            android:id="@+id/detail_title_view"
+            android:textAlignment="center"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
+            android:padding="@dimen/textview_padding_size">
+
+        </TextView>
+        <ImageView
+            android:layout_column="0"
+            android:layout_rowSpan="5"
+            android:id="@+id/movie_poster_view"
+            android:padding="@dimen/textview_padding_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/bold_rating_label"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:paddingBottom="@dimen/textview_padding_size"
+            android:paddingLeft="@dimen/textview_padding_size"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rating_body"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:textAlignment="center"
+            android:paddingBottom="@dimen/textview_padding_size"
+            android:paddingLeft="@dimen/textview_padding_size"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/bold_date_label"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:paddingBottom="@dimen/textview_padding_size"
+            android:paddingLeft="@dimen/textview_padding_size"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_body"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:textAlignment="center"
+            android:paddingBottom="@dimen/textview_padding_size"
+            android:paddingLeft="@dimen/textview_padding_size"/>
+    </GridLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:id="@+id/bold_overview_label"
+        android:layout_below="@id/detail_gridview"
+        android:padding="@dimen/textview_padding_size"/>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/overview_size"
+        android:id="@+id/nested_scroll"
+        android:padding="@dimen/textview_padding_size"
+        android:layout_below="@id/bold_overview_label">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/overview_size"
+            android:id="@+id/overview_body"
+            android:scrollbars="vertical"/>
+    </android.support.v4.widget.NestedScrollView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/movie_backdrop_view"
+        android:layout_below="@id/nested_scroll"
+        android:layout_margin="0dp"
+        android:paddingBottom="0dp"
+        android:scaleType="centerCrop"/>
+
+</RelativeLayout>
+
+</ScrollView>-->

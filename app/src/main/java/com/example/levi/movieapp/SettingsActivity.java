@@ -23,8 +23,15 @@ import java.util.Set;
  * href="http://developer.android.com/guide/topics/ui/settings.html">Settings
  * API Guide</a> for more information on developing a Settings UI.
  */
-public class SettingsActivity extends PreferenceActivity
+public class SettingsActivity extends AppCompatPreferenceActivity
         implements Preference.OnPreferenceChangeListener {
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        super.onSupportNavigateUp();
+        Log.v("NAV", "up navigation attempt detected");
+        return true;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,6 +39,7 @@ public class SettingsActivity extends PreferenceActivity
         // Add 'general' preferences, defined in the XML file
         addPreferencesFromResource(R.xml.pref_general);
         setContentView(R.layout.activity_settings);
+
 
         // For all preferences, attach an OnPreferenceChangeListener so the UI summary can be
         // updated when the preference changes.

@@ -40,7 +40,6 @@ import java.util.Iterator;
  */
 public class PosterFragment extends Fragment {
     private ImageAdapter mPosterAdapter;
-
     private JSONArray moviesArray;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -118,11 +117,14 @@ public class PosterFragment extends Fragment {
                 numPosters = 3*(54/3);
             }else if(numPosters>3){
                 numPosters = 3*(numPosters/3);
+            }else if(numPosters==0){
+                Log.v("CAUGHT!", "there are no results");
             }
 
 
             // construct poster urls one by one
             String[] resultStrs = new String[numPosters];
+            Log.v("CAUGHT!", resultStrs.toString());
             for(int i = 0; i < numPosters; i++) {
                 String imgUrl = "http://image.tmdb.org/t/p/w185/";
 
@@ -149,6 +151,7 @@ public class PosterFragment extends Fragment {
         @Override
         protected String[] doInBackground(String... params){
             if(params.length == 0){
+                Log.v("CAUGHT!", "params length zero");
                 return null;
             }
 
@@ -304,9 +307,18 @@ public class PosterFragment extends Fragment {
 
             if(result != null){
                 mPosterAdapter.clear();
-                for(String s : result){
-                    mPosterAdapter.add(s);
+                if(result.length > 0){
+                    for(String s : result){
+                        mPosterAdapter.add(s);
+                    }
+                } else{
+                    mPosterAdapter.notifyDataSetChanged();
+                    Toast.makeText(getActivity(), "Sadly, no movies match your unreasonably specific preferences.",
+                            Toast.LENGTH_LONG).show();
                 }
+
+            }else{
+                Log.v("CAUGHT!", "results null");
             }
         }
     }
